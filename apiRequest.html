@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Request</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #3badb2, #004aad, #3badb2, #004aad);
+            background-size: 300% 300%;
+            animation: gradientBG 8s ease infinite;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+        .card{
+            max-width: 300px;
+            width: 100%;
+            margin-inline: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.025);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.025);
+        }
+        .card img{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+        .card h2{
+            margin: 0;
+            margin-block:0.25rem ;
+        }
+        .card p{
+            margin: 0;
+            margin-block:0.25rem ;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        .stats{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: white;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+  <script>
+    const url=`https://api.github.com/users/subhamaydebnath`;
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET",url);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+        const data = JSON.parse(xhr.responseText);
+           document.querySelector('.card').innerHTML = `
+           <img src="${data.avatar_url}" alt="avatar">
+           <h2>${data.name}</h2>
+           <p>${data.bio}</p>
+           <p>${data.location}</p>
+           <div class="stats">
+            <p>Followers: ${data.followers}</p>
+            <p>Following: ${data.following}</p>
+            </div>
+            <div style="margin-top: 1rem; margin-bottom: .5rem;">
+             <a href="${data.html_url}" target="_blank">Github Profile</a>
+            </div
+           `
+        }
+    }
+    xhr.send()
+  </script>  
+</body>
+</html>
