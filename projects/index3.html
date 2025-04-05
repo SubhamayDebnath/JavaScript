@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body style="height: 100dvh; display: flex; justify-content: center; align-items: center; background-color: #0b0b0b;">
+    <div class="clock" style="background-color: rgb(0, 51, 128); color: white; padding: 1rem; border-radius: 10px;"></div>
+    <script>
+        const clock = document.querySelector('.clock');
+        setInterval(()=>{
+            let date = new Date();
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let ampm = hour >= 12 ? 'PM' : 'AM';
+            clock.innerHTML = `${hour} : ${min} : ${sec} ${ampm}`;
+        },1000);
+    </script>
+</body>
+</html>

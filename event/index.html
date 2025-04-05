@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #0d0c0c;
+            color: white;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            gap: 0.5rem;
+        }
+        img{
+           width: 100%;
+           height: auto;
+           border-radius: 5px;
+           transition: all 0.3s ease-in-out;
+           filter: brightness(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/31133725/pexels-photo-31133725/free-photo-of-streetlamp-amidst-blooming-cherry-blossoms-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img1">
+        <img src="https://images.pexels.com/photos/20818623/pexels-photo-20818623/free-photo-of-cherry-blossom-in-the-temple.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img2">
+        <img src="https://images.pexels.com/photos/31346262/pexels-photo-31346262/free-photo-of-idyllic-view-of-amalfi-coastline-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img3">
+        <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img4">
+        <img src="https://images.pexels.com/photos/31364107/pexels-photo-31364107/free-photo-of-scenic-hike-on-skellig-michael-ireland.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img5">
+        <img src="https://images.pexels.com/photos/31048513/pexels-photo-31048513/free-photo-of-tokyo-cityscape-with-mount-fuji-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="demo" id="img6">
+    </div>
+    <script>
+        let images = document.querySelectorAll('img');
+        images.forEach((image)=>{
+            image.addEventListener('click',()=>{
+                console.log(image);
+            })
+        })
+    </script>
+</body>
+</html>

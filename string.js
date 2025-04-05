@@ -1,0 +1,26 @@
+// console.log("hello");
+
+const user = new String("Subhamay");
+console.log(user.length);
+console.log(user.toUpperCase());
+console.log(user.toLowerCase());
+console.log(user.charAt(3));
+console.log(user.indexOf("a"));
+console.log(user.lastIndexOf("a"));
+console.log(user.slice(-6));
+console.log(user.replace("a", "A"));
+console.log(user.split("a"));
+console.log(user.concat(" is a good boy"));
+console.log(user.trim());
+console.log(user.trimEnd());
+console.log(user.trimStart());
+console.log(user.trimLeft());
+console.log(user.trimRight());
+console.log(user.padStart(10, "0"));
+console.log(user.padEnd(10, "0"));
+console.log(user.repeat(3));
+console.log(user.includes("a"));
+console.log(user.startsWith("S"));
+console.log(user.endsWith("y"));
+console.log(user.includes("a", 5));
+console.log(user.includes("a", 5, 10));

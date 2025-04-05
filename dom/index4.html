@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        function addLang(lang){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(lang));
+            document.querySelector('.lang').appendChild(li);
+        }
+        addLang('Python');
+        addLang('Java');
+        addLang('C++');
+
+        const secondLang = document.querySelector('li:nth-child(2)');
+        const newLi = document.createElement('li');
+        newLi.appendChild(document.createTextNode('Ruby'));
+        secondLang.replaceWith(newLi);
+        document.querySelector('li:last-child').remove();
+    </script>
+</body>
+</html>
