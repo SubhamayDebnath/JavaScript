@@ -25,18 +25,18 @@ The new object is returned: After the constructor function has been called, if i
 // this new keyword section
 
 
-function createPerson(name, age) {
-    this.name = name;
-    this.age = age;
-}
-createPerson.prototype.sayHello = function() {
-    console.log(`Hello ${this.name}`);
-}
-createPerson.prototype.getData = function() {
-    console.log(`Name: ${this.name} Age: ${this.age}`);
-}
+// function createPerson(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+// createPerson.prototype.sayHello = function() {
+//     console.log(`Hello ${this.name}`);
+// }
+// createPerson.prototype.getData = function() {
+//     console.log(`Name: ${this.name} Age: ${this.age}`);
+// }
 
-const userOne = new createPerson("subhamay", 25);
+// const userOne = new createPerson("subhamay", 25);
 // userOne.getData();
 // userOne.sayHello();
 
@@ -46,27 +46,66 @@ const userOne = new createPerson("subhamay", 25);
 // console.log(myName.length);
 
 
-let myHeroes = ['superman', 'batman', 'spiderman'];
+// let myHeroes = ['superman', 'batman', 'spiderman'];
 
-let heroPower={
-    superman:"fly",
-    batman:"fight",
-    spiderman:"web",
-    getSuperPower: function(hero){
-        console.log(hero+" can "+this[hero]);
-    }
-}
-heroPower.getSuperPower("superman")
+// let heroPower={
+//     superman:"fly",
+//     batman:"fight",
+//     spiderman:"web",
+//     getSuperPower: function(hero){
+//         console.log(hero+" can "+this[hero]);
+//     }
+// }
+// heroPower.getSuperPower("superman")
 
-Object.prototype.subhamay=function(){
-    console.log("subhamay");
-}
-Array.prototype.subhamay2=function(){
-    console.log("subhamay new");
-}
+
+
+// Object.prototype.subhamay=function(){
+//     console.log("subhamay");
+// }
+// Array.prototype.subhamay2=function(){
+//     console.log("subhamay new");
+// }
 // heroPower.subhamay();
 // myHeroes.subhamay();
 
 // heroPower.subhamay2()
 // myHeroes.subhamay2()
 
+// const user = {
+//     name:"subhamay",
+//     age:25
+// }
+// const teacher ={
+//     makeVideo:true
+// }
+// const teachingSupport = {
+//     isAvailable:false
+// }
+
+// const TASupport = {
+//     makeAssignment: 'JS Assignment',
+//     fullTime: true,
+//     __proto__:teachingSupport
+//     // __proto__:teacher
+// }
+// teacher.__proto__=TASupport;
+// teacher.__proto__ = user
+// console.log(teacher);
+
+// Object.setPrototypeOf(TASupport,teacher)
+// Object.setPrototypeOf(TASupport,teachingSupport);
+// console.log(TASupport);
+
+// Object.setPrototypeOf(teachingSupport,user);
+// console.log(TASupport);
+
+
+
+// const myStr = " Hello Word   "
+String.prototype.trueLen = function(){
+    return this.trim().length;
+}
+// console.log(myStr.trueLen());
+
+// console.log("subhamay".trueLen());
