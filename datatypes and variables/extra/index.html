@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="data"></div>
+    <script>
+        // const inputData = alert("hello world");
+        const isConfirm = confirm("are you sure?");
+       if(isConfirm){
+        const inputData = prompt("hello world");
+        document.getElementsByClassName("data").innerHTML = inputData;
+       }else{
+        alert("hello world");
+       }
+    </script>
+</body>
+</html>
