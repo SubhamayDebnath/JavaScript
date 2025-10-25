@@ -21,3 +21,10 @@ console.log(Number.MAX_VALUE); //1.7976931348623157e+308
 console.log(Number.MIN_VALUE); //5e-324
 console.log(Number.EPSILON);//2.220446049250313e-16
 console.log('8' * '5'); // 40
+
+
+console.log(num.toLocaleString('en-US')); //100 returns string with locale en-US
+
+console.log(num.toLocaleString('hi-IN')); // 100  returns string with locale hi-IN 
+
+console.log(num.toLocaleString('hi-IN', {style: 'currency', currency: 'INR'})); // 100  returns string with locale hi-IN and currency INR
