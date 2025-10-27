@@ -59,3 +59,44 @@
 //     return result
 // }
 // console.log(customCapitalize('hello'));
+
+// Write a program to accept the strings which contain all vowels
+// function checkStr(str){
+//     if(typeof(str) !== 'string' || str.length === 0) return -1
+//     for(const ch of str.toLowerCase()){
+//         if(!'aeiou'.includes(ch)) return false;
+//     }
+//     return true
+// }
+// console.log(checkStr('aei'));
+
+
+// Write a program to count the Number of matching characters in a pair of string
+
+// function matchingOPair(str1,str2){
+//     if([str1,str2].some((a)=> !a || typeof(a) !== 'string' || a.length === 0)) return -1
+//     let total = 0;
+//     let prev = []
+//     for(const ch of str1.toLowerCase()){
+//         if(str2.toLowerCase().includes(ch) && !prev.includes(ch)){
+//             prev.push(ch)
+//             total+=1
+//         }
+//     }
+//     return total
+// }
+// console.log(matchingOPair('app','alpp'));
+
+// function matchingOPair(str1,str2){
+//     if([str1,str2].some((a)=> !a || typeof(a) !== 'string' || a.length === 0)) return -1
+//     let total = 0;
+//     let prev = new Set();
+//     for(const ch of str1.toLowerCase()){
+//         if(str2.toLowerCase().includes(ch) && !prev.has(ch)){
+//             prev.add(ch)
+//             total+=1
+//         }
+//     }
+//     return total
+// }
+// console.log(matchingOPair('app','alpp'));
