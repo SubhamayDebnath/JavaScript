@@ -100,3 +100,19 @@
 //     return total
 // }
 // console.log(matchingOPair('app','alpp'));
+
+// Write a program to remove all duplicates from a given string , keeping the 
+// first character only
+
+// function duplicateStr(str){
+//     if(typeof(str) !== 'string' || str.length === 0 ) return -1;
+//     // return [...new Set(str.split(''))].join('')
+//     let finalStr= '';
+//     for ( let i = 0 ; i < str.length ; i++ ){
+//         if(!finalStr.includes(str[i])){
+//             finalStr += str[i]
+//         }
+//     }
+//     return finalStr
+// }
+// console.log(duplicateStr('abaaab'));
